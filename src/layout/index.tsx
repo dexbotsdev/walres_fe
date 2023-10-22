@@ -1,9 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import { Sidebar } from "./Sidebar";
-import { Header } from "./Header";
+import { Outlet, useLocation } from "react-router-dom";
+import   Header   from "./Header";
 
 import "./style.scss";
+import SubHeader from "./SubHeader";
 
 interface MyContextType {
   activeBlackout: boolean;
@@ -20,6 +20,7 @@ export const Layout: React.FC = () => {
   const [activeNameInHeaderTitle, setActiveNameInHeaderTitle] =
     React.useState("");
   const [activeBlackout, setActiveBlackout] = React.useState<boolean>(false);
+  let location = useLocation();
 
   const hendlActiveSidebar = () => {
     setIsActiveSidebar(!isActiveSidebar);
@@ -35,18 +36,10 @@ export const Layout: React.FC = () => {
 
   return (
     <BlackoutContext.Provider value={{ activeBlackout, setActiveBlackout }}>
-      <div className="app">
-        <Sidebar
-          hendlUnactiveSidebar={hendlUnactiveSidebar}
-          isActiveSidebar={isActiveSidebar}
-          hendlActiveTitle={hendlActiveTitle}
-        />
+      <div className="app"> 
         <div className="content">
-          <Header
-            hendlActiveSidebar={hendlActiveSidebar}
-            isActiveSidebar={isActiveSidebar}
-            activeNameInHeaderTitle={activeNameInHeaderTitle}
-          />
+          <Header/>
+          <SubHeader />
           <Outlet />
           <div className={isActiveSidebar ? "blackout" : ""}></div>
         </div>
