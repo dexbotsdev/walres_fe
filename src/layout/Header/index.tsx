@@ -3,12 +3,11 @@ import { Layout, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import styled from 'styled-components';
 import "./style.scss"
-import logo from '../../assets/DexSmart.png'
-
+ 
 const StyledHeader = styled(Layout.Header)`
 position:sticky;
 top:0;
-padding-left:15rem;
+padding-left:15rem; 
  `
 
 const StyledMenu = styled(Menu)`
@@ -23,7 +22,7 @@ const MenuItemStyled = styled(Menu.Item)`
   && {
     top: 4px;
     border-bottom: 4px solid transparent;
-    color: white;
+    color: #080808;
     &:hover {
       border-bottom: 4px solid transparent;
       & > a {
@@ -34,7 +33,7 @@ const MenuItemStyled = styled(Menu.Item)`
   }
   &&.ant-menu-item-selected
   {
-    color: white;
+    color: #080808;
     border-bottom: 4px solid white;
 
     & > a {
@@ -42,7 +41,7 @@ const MenuItemStyled = styled(Menu.Item)`
     }
   }
   && > a {
-    color: #ffffff;
+    color: #080808;
     opacity: 0.60;
     font-weight: bold;
     letter-spacing: 0.01em;
@@ -55,8 +54,22 @@ const Header = () => {
 
 return (
   <StyledHeader >
-        <img src="/img/main-logo/WalRES.png" alt="" width='150px' />
+        <img src="/img/main-logo/logo.svg" alt="" width='150px' />
     
+        <StyledMenu
+      mode="horizontal"
+      selectedKeys={[location.pathname]}
+    >
+      <MenuItemStyled key="/">
+        <Link to="/">Home</Link>
+      </MenuItemStyled>
+      <MenuItemStyled key="/dashboard">
+        <Link to="/dashboard">Recover</Link>
+      </MenuItemStyled>
+      {/* <MenuItemStyled key="/toolBoard">
+        <Link to="/toolBoard">ToolBoard</Link>
+      </MenuItemStyled> */}
+    </StyledMenu>
   </StyledHeader>
 )}
 

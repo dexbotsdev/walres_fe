@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <p className="mb-0 copyright">Copyright 2023 © WalRES  | <a href="/en/privacy-policy">Privacy Policy</a></p>
+                        <p className="mb-0 copyright">Copyright 2023 © WalletRescue  | <a href="/en/privacy-policy">Privacy Policy</a></p>
                     </div>
                 </div>
             </div>

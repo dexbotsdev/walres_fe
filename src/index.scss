@@ -123,7 +123,20 @@ button {
 
 header {
   position: relative;
-  z-index: 99
+  z-index: 199;
+  box-shadow: 0 5px 10px rgba(27, 29, 30, 0.05);
+
+}
+
+.ant-layout-header {
+  background-color: #fff;
+  z-index: 299;
+  justify-content: space-between; 
+}
+
+.ant-layout-header .ant-menu {
+  line-height: inherit;
+  padding-right: 20rem;
 }
 
 header .navbar-expand-lg {
@@ -139,8 +152,7 @@ header .navbar-expand-lg .navbar-nav .nav-item:nth-last-child(3) .nav-link {
 header .navbar-expand-lg .navbar-nav .nav-link {
   padding: 0 20px;
   font-size: 18px;
-  line-height: 21.94px;
-  color: #242959;
+  line-height: 21.94px; 
   font-weight: 500;
   transition: all .3s ease
 }
@@ -171,7 +183,7 @@ header header .navbar-expand-lg .navbar-nav .nav-link.btn_link {
   height: 50px;
   width: 160px;
   background-color: #f7931a;
-  color: #fff;
+  color: #080808;
   text-align: center;
   font-size: 16px;
   line-height: 50px;
@@ -186,7 +198,7 @@ header .language-links {
 }
 
 header .language-links .language-link {
-  color: #cfcfcf
+  color: #080808
 }
 
 header .language-links .language-link.active {
@@ -2446,4 +2458,49 @@ footer .germany-logo {
       background: #f5f6fd;
       background: linear-gradient(90deg,#f5f6fd 0%,white 100%)
   }
+}
+
+.button {
+  border-radius: 5px;
+ background-image: linear-gradient(90deg, rgb(0, 44, 70) 60%, rgb(9, 9, 9) 100%);
+ -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+ box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+ border-radius: 5px;
+ border: 1px solid rgba(255, 255, 255, 0.5);
+ background-color: #001faa;
+ color: #ffffff;
+ font-family: "Montserrat";
+ font-size: 12px;
+ font-weight: 700;
+ font-style: normal;
+ letter-spacing: 1px;
+ line-height: 6px;
+ text-align: center;
+ font-style: normal;
+ letter-spacing: normal;
+ line-height: normal;
+ padding: 6px;
+ cursor: pointer;
+}
+.connectbutton {
+   border-radius: 5px;
+  background-image: linear-gradient(90deg, rgb(181, 52, 5) 60%, rgb(177, 93, 9) 100%);
+  -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #001faa;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 6px;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  padding: 6px;
+  cursor: pointer;
 }

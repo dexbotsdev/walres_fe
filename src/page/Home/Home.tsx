@@ -8,7 +8,7 @@ export const Home: React.FC = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="main_title white">Why WalRES?</h2>
+                        <h2 className="main_title white">Why WalletRescue?</h2>
                         <p>
                             Been a dumber to Copy code from Youtube to deploy a Token and got Recked?
                             Approved and Minted an NFT to find your wallet Emptied?
