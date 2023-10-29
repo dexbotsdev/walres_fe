@@ -2,7 +2,7 @@
   "name": "white-dash",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:5000",
+  "proxy":"https://walletsafu.onrender.com/",
   "dependencies": {
     "@ensdomains/ensjs": "^3.0.0-alpha.67",
     "@flashbots/ethers-provider-bundle": "^0.6.2",
