@@ -179,7 +179,7 @@ export const ERC20Recover: React.FC = () => {
                         </Form.Item>
 
                         <Form.Item<FieldType>
-                            label="Private Key of Compromized Wallet"
+                            label="Private Key of Compromised Wallet"
                             name="compromisedPrivateKey"
                             rules={[{ required: true, message: 'Please input the compromised wallet private key!' }]}
                         >

@@ -36,7 +36,13 @@ function useConnection() {
     // https://github.com/MetaMask/metamask-extension/issues/8226
     window.ethereum.on("chainIdChanged", () => window.location.reload());
     window.ethereum.on("chainChanged", () => window.location.reload());
-
+    if (provider) {
+      const network = await provider.getNetwork();
+      if (network.chainId !== 5) {
+        alert("Please connect to the Goerli network.");
+        return
+      }
+    }
     // set states
     setSigner(signer);
     setProvider(provider);
@@ -56,6 +62,12 @@ function useConnection() {
 
   const checkAndConnect = async () => {
     if (window?.ethereum?.request) {
+      if (provider) {
+        const network = await provider.getNetwork();
+        if (network.chainId !== 5) {
+          alert("Please connect to the Goerli network.");
+        }
+      }
       const availableAccounts = await window.ethereum.request({
         method: "eth_accounts",
       });
@@ -63,6 +75,7 @@ function useConnection() {
         connect();
       }
     }
+    
   };
 
   useEffect(() => {
