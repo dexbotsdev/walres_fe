@@ -38,10 +38,10 @@ function useConnection() {
     window.ethereum.on("chainChanged", () => window.location.reload());
     if (provider) {
       const network = await provider.getNetwork();
-      if (network.chainId !== 5) {
-        alert("Please connect to the Goerli network.");
-        return
-      }
+      // if (network.chainId !== 5) {
+      //   alert("Please connect to the Goerli network.");
+      //   return
+      // }
     }
     // set states
     setSigner(signer);
@@ -64,9 +64,9 @@ function useConnection() {
     if (window?.ethereum?.request) {
       if (provider) {
         const network = await provider.getNetwork();
-        if (network.chainId !== 5) {
-          alert("Please connect to the Goerli network.");
-        }
+        // if (network.chainId !== 5) {
+        //   alert("Please connect to the Goerli network.");
+        // }
       }
       const availableAccounts = await window.ethereum.request({
         method: "eth_accounts",
